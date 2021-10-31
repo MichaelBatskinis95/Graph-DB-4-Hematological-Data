@@ -1,7 +1,0 @@
-//CONTROL:pearsons' correlation of compounds <-- didn't work
-match (m1)<-[r1:RELATED_TO]-(n{Name:'C'})-[r2:RELATED_TO]->(m2)
-where m1 <> m2
-with m1,m2, gds.alpha.similarity.pearson(collect(r1.CON),collect(r2.CON)) as similarity
-//where abs(similarity)>=0.85
-return m1.Name, m2.Name, similarity
-
