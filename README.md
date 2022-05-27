@@ -56,9 +56,9 @@ The following issues were fixed in this stage:
 ✅ missing values
 ✅ entries with insufficient information
 ✅ duplicate entries from different sources
-
+<p align="middle">
 <img src="https://github.com/MichaelBatskinis95/Figures/blob/main/Exp_data_preprocessing.svg" width="400" height = "400"/><img src="https://github.com/MichaelBatskinis95/Figures/blob/main/data_curation.svg" width="400" height = "400"/>
-
+</p>
 ### 2. Graph Databasefor Bio/Hematological Networks
 
 #### 2.1 Query Requirements
