@@ -4,7 +4,7 @@ A graph-based framework, based on graph database technologies, to facilitate sto
 
 ## *Workflow*
 
-<img src="https://github.com/MichaelBatskinis95/Figures/blob/main/Workflow_HemData.jpg" width="1024" height = "256"/>
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/main/Workflow_HemData.jpg" width="1024" height = "240"/>
 
 ### 1. Data Collection & Preperation
 
@@ -52,16 +52,50 @@ Data retrieved from the following databases were used for the qualitative enrich
 
 <ins>Data Pre-processing and Curation</ins>
 
-The following issues were fixed in this stage:
-✅ missing values
-✅ entries with insufficient information
-✅ duplicate entries from different sources
+The following issues were fixed in this stage:</br>
+✅ missing values </br>
+✅ entries with insufficient information</br>
+✅ duplicate entries from different sources</br>
+
 <p align="middle">
 <img src="https://github.com/MichaelBatskinis95/Figures/blob/main/Exp_data_preprocessing.svg" width="400" height = "400"/><img src="https://github.com/MichaelBatskinis95/Figures/blob/main/data_curation.svg" width="400" height = "400"/>
 </p>
-### 2. Graph Databasefor Bio/Hematological Networks
+
+### 2. Graph Database for Bio/Hematological Networks
+
+<p align="justify">The construction of the knowledge graph, that highlights the associations between different bio/hematological parameters related to the G6PD enzyme, which is the key component of the biological issue that was investigated, was conducted in Neo4j graph database. </p>
 
 #### 2.1 Query Requirements
+
+<p align="justify">The first step towards the construction of the bio/hematological data networks was to determine user requirements. Those requirements will drive the construction of a knowledge graph that could explain interactions or, better yet, reveal potential associations between different parameters. </p>
+
+<ins> First Group of Requirements: Biologically Converged Parameters </ins>
+
+- <p align="justify">Spectating inter- and intra- parameter associations in all possible combinations &rarr; Gives insight about interactions between one or more different data types </p>
+- <p align="justify">Determination of crucial parameters &rarr; Utilizing Centrality algorithms to gain insight about the most popular nodes of the – case study – system (hub nodes) </p>
+- <p align="justify">Identification of converged metabolites based on the storage timeline of RBCs &rarr; Can be achieved by dividing the seven samplings into three – storage based – groups (early, mid, and late storage) and then performing correlation analysis (e.g using Pearson's Similarity algorithm) to identify the most converged components.</p></br>
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/main/time_based_workflow.jpg" width="800" height = "400"/>
+</p>
+
+<ins> Second Group of Requirements: Data Visualization and Subnetworks Representation </ins>
+
+- <p align="justify">Graph representation based on specific properties of the case study system &rarr; Utilizing filtering tools to gain insight about specific components</p>
+- Detection of communities &rarr; Can be achieved by perfoming community detection analysis (e.g. using Louvain method)
+- Focusing on clusters/subnetworks &rarr; Refers to the subsequent analysis after the detection of communities.
+
+<ins> Third Group of Requirements: Comparative Analysis of Donors’ Metabolic Profile </ins>
+
+- <p align="justify">Comparing donors’ metabolic profile in pairs &rarr; Answering to this question could highlight either the homogeneity or heterogeneity of the system, since all donors were tested under the same conditions (Can be achieved by applying pairwise comparison of donors' metabolic profile.</p>
+
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/main/pairwise%20comparison.jpg" width="600" height = "400"/>
+</p>
+
+- <p align="justify">Investigating the impact of storage to RBCs’ metabolic profile &rarr; The purpose of this query is to gain insight about the effect of storage to RBCs’ vitality and functionality. Comparing the in vivo system of each donor (D0) with the in vitro system (D7 – D42) could reveal the critical storage period at which the functionality of RBCs starts to disrupt.</p>
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/main/impact%20of%20storage%20on%20RBCs%20of%20G6PD-%20donors.jpg" width="600" height = "400"/>
+</p>
 
 #### 2.2 The Graph Data Model
 
