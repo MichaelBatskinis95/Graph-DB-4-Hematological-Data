@@ -2,7 +2,7 @@
 
 A graph-based framework, based on graph database technologies, to facilitate storage, retrieval, and exploration for hematological and biological graph data.
 
-## **Workflow**
+## *Workflow*
 
 ### 1. Data Collection & Preperation
 
