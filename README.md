@@ -6,6 +6,10 @@ A graph-based framework, based on graph database technologies, to facilitate sto
 
 <img src="https://github.com/MichaelBatskinis95/Figures/blob/main/Workflow_HemData.jpg" width="1024" height = "240"/>
 
+**<ins>Important Note</ins>**</br>
+Pre-processing of physiological data, along with the extraction of computationally verified data were performed in Python.
+
+
 ### 1. Data Collection & Preperation
 
 **Final Dataset = Experimental Data + Computationally Verified Data**
