@@ -8,6 +8,10 @@ A graph-based framework, based on graph database technologies, to facilitate sto
 
 ### 1. Data Collection & Preperation
 
+**Final Dataset = Experimental Data + Computationally Verified Data**
+
+<ins>Experimental Data</ins>
+
 ### 2. Graph Databasefor Bio/Hematological Networks
 
 #### 2.1 Query Requirements
