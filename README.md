@@ -4,7 +4,7 @@ A graph-based framework, based on graph database technologies, to facilitate sto
 
 ## *Workflow*
 
-![screen shot](https://https://github.com/MichaelBatskinis95/Figures/blob/main/Workflow_HemData.jpg?raw=true)
+![screen shot](https://https://github.com/MichaelBatskinis95/Figures/blob/main/Workflow_HemData.jpg)
 
 ### 1. Data Collection & Preperation
 
