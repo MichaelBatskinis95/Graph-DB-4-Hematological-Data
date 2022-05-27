@@ -1,0 +1,58 @@
+ALT,Alanine Transaminase
+AST,Aspartate Transaminase
+ATHIROMATIKOS,Atherogenic Index
+BAS,Basophils
+Ca,Intracellular Calcium
+Chol,Cholesterol
+Diamide,Intracellular ROS after exposure to diamide 
+Diamide_37,Intracellular ROS after exposure to diamide and incubation at 37oC
+Discocytes,% discocytes
+EOS,Eosinophils
+Fe,Serum iron
+Ferritin,Ferritin
+FREE_HB,Hemolysis (free Hb)
+FREE_HB_37,Hemolysis (free Hb) after incubation at 37oC
+G6PD_Activity,G6PD_Activity
+Hct,hematocrit
+HDL, High-Density Lipoproteins
+K,Intracellular Potassium
+LDL,Low-Density Lipoproteins
+LLVY_CYT,LLVY activity of Proteasome 
+LLVY_GHOST,LLVY GHOST
+LLVY_SUP,LLVY SUP
+LYM,Lymphocytes
+MCF,Osmotic fragility of RBCs
+MCF_37,Osmotic fragility of RBCs after incubation at 37oC
+MCH,Mean Corpuscular Hemoglobin
+MCHC, Mean Corpuscular Hemoglobin Concentration
+MCV,Mean Corpuscular Volume
+MFI,Mechanical fragility of RBCs
+MFI_37,Mechanical fragility of RBCs after incubation at 37oC
+MON,Monocytes
+MPs_CD235,MPs CD235+
+MPs_PA,MP procoagulant activity
+MPs_PS,Plasma Microparticles %
+MPV,Platelet markers
+Na,Intracellular Sodium
+NEU,Neutrophils
+Non_Reversible,Severe Morphological Defect
+OXYBLOT,Protein Carbonylation
+PCT,Plateletcrit
+PDW,Platelet Distribution Width
+PLT,Platelets
+PS,% erythrocytes after exposure to PS
+RBC,# erythrocytes
+RDW,Red Cell Distribution Width
+RET,Reticulocytes
+Reversible,Mild Morphological Defect
+ROS,Intracellular ROS
+ROS_37,Intracellular ROS after incubation at 37oC
+T_BIL,Total Bilirubin
+TAC,Total antioxidant capacity of plasma
+TAC_UA,uric acid (UA)-independent AC of plasma
+tBHP,Intracellular ROS after exposure to tBHP
+tBHP_37,Intracellular ROS after exposure to tBHP after incubation at 37oC
+Triglycerides,Triglycerides
+UA,UA-dependent AC of plasma
+URIC_ACID,URIC ACID
+WBC,Leukocytes
