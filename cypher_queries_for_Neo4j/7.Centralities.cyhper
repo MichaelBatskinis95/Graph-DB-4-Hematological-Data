@@ -1,0 +1,53 @@
+//Step 1: Compounds'Betweenness centrality scores
+match (n)-[r1:compound_similarity]->(m)
+with collect(distinct r1.timestamp) as timepoints
+unwind range(0,size(timepoints)-1) as time
+call gds.betweenness.stream(
+{nodeQuery:'match (a) where none(label in labels(a) where label in ["Donors","G6PD","Proteomics","Physiological_Parameters"]) return distinct id(a) as id',
+relationshipQuery:"match (n)-[r:compound_similarity{timestamp: $time}]->(m) return id(n) as source, id(m) as target",
+parameters:{time:timepoints[time]}
+})
+yield nodeId, score
+match (n)-[r:compound_similarity{timestamp:timepoints[time]}]->(m)
+where id(n) = nodeId
+with distinct n AS Compound, r.timestamp as time, score as `betweeness centrality`
+with Compound, collect(distinct `betweeness centrality`) as allScores
+where size(allScores) = 7 //filter out compounds that does not satisfy the repeatability criterion
+return Compound.Name as Compound,labels(Compound)[0] as Pathway, allScores[0] as BC_D0, allScores[1] as BC_D7, 
+allScores[2] as BC_D14,allScores[3] as BC_D21,allScores[4] as BC_D28,
+allScores[5] as BC_D35,allScores[6] as BC_D42 order by Compound asc;
+
+//Step 2: Compounds' Degree centrality scores
+match (n)-[r1:compound_similarity]->(m)
+with collect(distinct r1.timestamp) as timepoints
+unwind range(0,size(timepoints)-1) as time
+call gds.alpha.degree.stream(
+{nodeQuery:'match (a) where none(label in labels(a) where label in ["Donors","G6PD","Proteomics","Physiological_Parameters"]) return distinct id(a) as id',
+relationshipQuery:"match (n)-[r:compound_similarity{timestamp: $time}]->(m) return id(n) as source, id(m) as target",
+parameters:{time:timepoints[time]}
+})
+yield nodeId, score
+match (n)-[r:compound_similarity{timestamp:timepoints[time]}]->(m)
+where id(n) = nodeId
+with distinct n AS Compound, collect (distinct m.Name) as Neighbours, score as `Degree Centrality`
+with Compound, collect(distinct `Degree Centrality`) as all_DC_Scores, collect(size(Neighbours)) as `# of neigbours/timepoint`
+where size(all_DC_Scores) = 7 //filter out compounds that does not satisfy the repeatability criterion
+return Compound.Name as Compound,labels(Compound)[0] as Pathway, all_DC_Scores[0] as DC_D0, all_DC_Scores[1] as DC_D7, 
+all_DC_Scores[2] as DC_D14,all_DC_Scores[3] as DC_D21,all_DC_Scores[4] as DC_D28,
+all_DC_Scores[5] as DC_D35,all_DC_Scores[6] as DC_D42 order by Compound asc;
+
+//Step 3: Centralities of Converged Phys-Comp Network
+call gds.betweenness.stream(
+{nodeQuery:'match (a)-[r:converged_phys_compounds_correlations]-() return distinct id(a) as id',
+relationshipQuery:"match (n)-[r:converged_phys_compounds_correlations]-(m) return id(n) as source, id(m) as target"}
+)
+yield nodeId, score
+with nodeId as ID, score as BC
+call gds.alpha.degree.stream(
+{nodeQuery:'match (a)-[r:converged_phys_compounds_correlations]-() return distinct id(a) as id',
+relationshipQuery:"match (n)-[r:converged_phys_compounds_correlations]-(m) return id(n) as source, id(m) as target"}
+)
+yield nodeId, score
+match (n)-[r:converged_phys_compounds_correlations]-()
+where id(n) = nodeId and ID = nodeId and BC > 0 and  score > 0 
+return distinct n.Name as Parameter, BC as Betweeness_Centrality, score as Degree_Centrality

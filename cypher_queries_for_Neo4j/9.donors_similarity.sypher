@@ -1,0 +1,13 @@
+// Cosine Similarities of Donors
+MATCH (m:Donors)-[r:RELATED_TO]->(n)
+WITH n, collect(DISTINCT r.timestamp) AS time
+UNWIND range(0,size(time)-1) AS i
+MATCH (p1:Donors)-[r1:RELATED_TO{timestamp:time[i]}]->(n)<-[r2:RELATED_TO{timestamp:time[i]}]-(p2:Donors)
+WHERE id(p1)<id(p2) AND p1.Name <> 'C' AND p2.Name <> 'C'
+WITH sum(r1.CON * r2.CON) AS DotProduct,
+      sqrt(REDUCE(r1Dot = 0.0, a IN collect(r1.CON) | r1Dot + a^2)) AS r1Length,
+      sqrt(REDUCE(r2Dot = 0.0, b IN COLLECT(r2.CON) | r2Dot + b^2)) AS r2Length,
+      p1, p2
+//RETURN p1.Name AS `Donor 1`, p2.Name AS `Donor 2`, DotProduct / (r1Length * r2Length) AS Similarity ORDER BY `Donor 1`
+MERGE (p1)-[s:donor_similarity]-(p2)
+SET   s.similarity = DotProduct / (r1Length * r2Length)
