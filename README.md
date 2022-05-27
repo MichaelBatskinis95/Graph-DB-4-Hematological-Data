@@ -116,7 +116,7 @@ The following issues were fixed in this stage:</br>
 <p align="justify">By assembling the outcome of what was described in Sections 2.1, 2.2 and 2.3 the final knowledge graph can be generated. We could describe the bio/hematological data network as a network of two layers. The first layer consists of the pre-processed experimental data along with all correlations that were mentioned in Section 2.3, while the second layer includes external data sources (nodes, relationships, and properties) that enrich the length and depth of the knowledge graph by adding more detailed information regarding proteins and metabolites related – directly or indirectly – to G6PD. </p>
 
 <p align="middle">
-<img src="https://github.com/MichaelBatskinis95/Figures/blob/main/final_knowledge_graph.jpg" width="800" height = "400"/>
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/main/final_knowledge_graph.jpg" width="800" height = "450"/>
 </p>
 
 ### 3. Data Exploration for Bio/Hematological Networks
