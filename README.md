@@ -12,6 +12,20 @@ A graph-based framework, based on graph database technologies, to facilitate sto
 
 <ins>Experimental Data</ins>
 
+Data about the metabolic, proteomic & physiological profile of 6 G6PD deficient & 1 control donor were retrieved.
+
+*Metabolic Data*
+
+7 weekly samplings, 7 Donors, 295 metabolites
+
+For each metabolite the following information was collected:
+- official name
+- ID in Kegg Database
+- metabolic pathway to which it belongs and
+- abundances in both G6PD deficient and control donors
+
+*Physiological Data*
+
 ### 2. Graph Databasefor Bio/Hematological Networks
 
 #### 2.1 Query Requirements
