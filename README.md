@@ -2,7 +2,7 @@
 
 A graph-based framework, based on graph database technologies, to facilitate storage, retrieval, and exploration for hematological and biological graph data.
 
-## Pipeline
+## **Workflow**
 
 ### 1. Data Collection & Preperation
 
@@ -14,4 +14,6 @@ A graph-based framework, based on graph database technologies, to facilitate sto
 
 #### 2.3 Bio/Hematological Data Analysis
 
-### 2.4 The final Knowledge Graph 
+#### 2.4 The final Knowledge Graph 
+
+### 3. Data Exploration for Bio/Hematological Networks
