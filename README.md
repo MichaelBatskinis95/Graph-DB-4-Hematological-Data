@@ -45,10 +45,10 @@ For each protein the following information were collected:
 <ins>Computationally Verified Data</ins>
 
 Data retrieved from the following databases were used for the qualitative enrichment of the Knowledge Graph:
-- String: 241 protein interactions between G6PD and other related proteins
-- STITCH: 453 protein-chemical or chemical-chemical interactions
-- Ensembl: 39 records about diseases related to G6PD or proteins closely associated with it
-- Human Protein Atlas (HPA): 27 additional diseases
+- *String*: 241 protein interactions between G6PD and other related proteins
+- *STITCH*: 453 protein-chemical or chemical-chemical interactions
+- *Ensembl*: 39 records about diseases related to G6PD or proteins closely associated with it
+- *Human Protein Atlas (HPA)*: 27 additional diseases
 
 <ins>Data Pre-processing and Curation</ins>
 
