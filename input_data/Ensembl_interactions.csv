@@ -1,0 +1,39 @@
+,disease,UniprotID,source
+0,NON RARE IN EUROPE: Glucose-6-phosphate-dehydrogenase deficiency,P11413,Orphanet
+1,"MALARIA, SUSCEPTIBILITY TO MALARIA, RESISTANCE TO, INCLUDED",P11413,OMIM
+2,Class I glucose-6-phosphate dehydrogenase deficiency,P11413,Orphanet
+3,"Anemia, nonspherocytic hemolytic, due to g6pd deficiency",P11413,OMIM
+4,ACATALASEMIA,P04040,Orphanet
+5,ACATALASEMIA,P04040,OMIM
+6,Acute lymphoblastic leukemia,Q00610,Cancer Gene Census
+7,MiT family translocation renal cell carcinoma,Q00610,Orphanet
+8,Autosomal dominant non-syndromic intellectual disability,Q00610,Orphanet
+9,Epilepsy and intellectual disability,Q00610,DDG2P
+10,Undetermined early-onset epileptic encephalopathy,Q00610,Orphanet
+11,Inflammatory myofibroblastic tumor,Q00610,Orphanet
+12,"MENTAL RETARDATION, AUTOSOMAL DOMINANT 56",Q00610,OMIM
+13,Upper thoracic spina bifida aperta,P11586,Orphanet
+14,"Neural tube defects, folate-sensitive",P11586,OMIM
+15,Total spina bifida cystica,P11586,Orphanet
+16,Cervicothoracic spina bifida aperta,P11586,Orphanet
+17,Cervical spina bifida cystica,P11586,Orphanet
+18,Thoracolumbosacral spina bifida cystica,P11586,Orphanet
+19,Total spina bifida aperta,P11586,Orphanet
+20,Lumbosacral spina bifida aperta,P11586,Orphanet
+21,Lumbosacral spina bifida cystica,P11586,Orphanet
+22,Cervical spina bifida aperta,P11586,Orphanet
+23,Thoracolumbosacral spina bifida aperta,P11586,Orphanet
+24,Cervicothoracic spina bifida cystica,P11586,Orphanet
+25,COMBINED IMMUNODEFICIENCY AND MEGALOBLASTIC ANEMIA WITH OR WITHOUT HYPERHOMOCYSTEINEMIA,P11586,OMIM
+26,Upper thoracic spina bifida cystica,P11586,Orphanet
+27,Familial prostate cancer,P08118,Orphanet
+28,"PROSTATE CANCER, HEREDITARY, 13",P08118,OMIM
+29,Hypermethioninemia encephalopathy due to adenosine kinase deficiency,P55263,Orphanet
+30,HYPERMETHIONINEMIA DUE TO ADENOSINE KINASE DEFICIENCY,P55263,OMIM
+31,"AMYLOIDOSIS, FINNISH TYPE",P06396,OMIM
+32,AGel amyloidosis,P06396,Orphanet
+33,PLG-related hereditary angioedema with normal C1Inh,P00747,Orphanet
+34,Hypoplasminogenemia,P00747,Orphanet
+35,"PLASMINOGEN DEFICIENCY, TYPE I LIGNEOUS CONJUNCTIVITIS, INCLUDED",P00747,OMIM
+36,Glycogen storage disease due to muscle phosphofructokinase deficiency,P08237,Orphanet
+37,GLYCOGEN STORAGE DISEASE VII,P08237,OMIM

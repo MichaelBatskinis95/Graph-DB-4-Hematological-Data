@@ -1,0 +1,26 @@
+genes,UniProtID,diseases
+G6PD,P11413,Cancer-related genes
+G6PD,P11413, Disease variant
+G6PD,P11413, Hereditary hemolytic anemia
+ACLY,P53396,Cancer-related genes
+ACLY,P53396, FDA approved drug targets
+CAT,P04040,Cancer-related genes
+CAT,P04040, FDA approved drug targets
+CLTC,Q00610,Cancer-related genes
+CLTC,Q00610, Disease variant
+CLTC,Q00610, Mental retardation
+MSMB,P08118,Cancer-related genes
+ADK,P55263,Disease variant
+FOLH1,Q04609,Cancer-related genes
+FOLH1,Q04609, FDA approved drug targets
+GSN,P06396,Amyloidosis
+GSN,P06396, Cancer-related genes
+GSN,P06396, Corneal dystrophy
+GSN,P06396, Disease variant
+PLG,P00747,Cancer-related genes
+PLG,P00747, Disease variant
+PLG,P00747, FDA approved drug targets
+PLG,P00747, Thrombophilia
+PFKM,P08237,Disease variant
+PFKM,P08237, Glycogen storage disease
+NCOA3,Q9Y6Q9,Cancer-related genes
