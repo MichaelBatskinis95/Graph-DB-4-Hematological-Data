@@ -138,6 +138,10 @@ $$ Cosine Similarity(A,B) = {A\bullet B \over {\lVert \mathbf{A} \rVert \times \
 
 **<ins>Setting the Threshold</ins>**
 
+After properly estimating Pearson Similarity scores, the filtering of the most significant intra- and inter- parameter correlations took place.  To o achieve that, a threshold was set, so that statistically significant associations will be distinguished.  The value of the threshold varied in each case, depending on the size of the case study dataset or the number of samplings.
+
+**<ins>Filtering biologically converged correlations</ins>**
+
 #### 2.4 The final Knowledge Graph 
 
 <p align="justify">By assembling the outcome of what was described in Sections 2.1, 2.2 and 2.3 the final knowledge graph can be generated. We could describe the bio/hematological data network as a network of two layers. The first layer consists of the pre-processed experimental data along with all correlations that were mentioned in Section 2.3, while the second layer includes external data sources (nodes, relationships, and properties) that enrich the length and depth of the knowledge graph by adding more detailed information regarding proteins and metabolites related – directly or indirectly – to G6PD. </p>
