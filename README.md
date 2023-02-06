@@ -111,6 +111,8 @@ The following issues were fixed in this stage:</br>
 
 #### 2.3 Bio/Hematological Data Analysis
 
+<p align = "justify">After importing all necessary data to the network, statistical analysis using graph-related algorithms, to filter the most statistically significant parameters of the network, took place.  The process that was followed 1) started with finding a suitable approach to explore the data that were available, 2) followed by setting a proper threshold, so that the outcome would be accurate enough and 3) concluded with filtering out biologically converged intra- and inter- parameter relationships.</p>
+
 #### 2.4 The final Knowledge Graph 
 
 <p align="justify">By assembling the outcome of what was described in Sections 2.1, 2.2 and 2.3 the final knowledge graph can be generated. We could describe the bio/hematological data network as a network of two layers. The first layer consists of the pre-processed experimental data along with all correlations that were mentioned in Section 2.3, while the second layer includes external data sources (nodes, relationships, and properties) that enrich the length and depth of the knowledge graph by adding more detailed information regarding proteins and metabolites related – directly or indirectly – to G6PD. </p>
