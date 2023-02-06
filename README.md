@@ -113,6 +113,29 @@ The following issues were fixed in this stage:</br>
 
 <p align = "justify">After importing all necessary data to the network, statistical analysis using graph-related algorithms, to filter the most statistically significant parameters of the network, took place.  The process that was followed 1) started with finding a suitable approach to explore the data that were available, 2) followed by setting a proper threshold, so that the outcome would be accurate enough and 3) concluded with filtering out biologically converged intra- and inter- parameter relationships.</p>
 
+**<ins>Approach</ins>**
+
+Two algorithms were applied during the statistical analysis: <b>Pearson Similarity algorithm</b> and <b>Cosine Similarity algorithm</b>.
+
+*Pearson Similarity Algorithm*
+
+Applied for the characterization of significant intra- and inter- parameters associations between different datasets, such as:
+- Compound Similarities
+- Metabolites associated with G6PD
+- Physiological Parameter – Compound Similarities
+- Protein Similarities
+- Protein – Compounds Similarities 
+
+$$ Pearson's  Similarity(A,B) = {cov(A,B) \over {σ_{A}\bulletσ_{Β}}} = {{\sum_{i=1}^n (A_{i}-\overline A)(B_{i}-\overline B)} \over {\sum_{i=1}^n (A_{i}-\overline A)^2(B_{i}-\overline B)^2}} $$
+
+*Cosine Similarity Algorithm*
+
+Used for:
+- Comparison of donors’ metabolic profile
+- Effect of time in G6PD- donor’s RBCs
+
+
+
 #### 2.4 The final Knowledge Graph 
 
 <p align="justify">By assembling the outcome of what was described in Sections 2.1, 2.2 and 2.3 the final knowledge graph can be generated. We could describe the bio/hematological data network as a network of two layers. The first layer consists of the pre-processed experimental data along with all correlations that were mentioned in Section 2.3, while the second layer includes external data sources (nodes, relationships, and properties) that enrich the length and depth of the knowledge graph by adding more detailed information regarding proteins and metabolites related – directly or indirectly – to G6PD. </p>
