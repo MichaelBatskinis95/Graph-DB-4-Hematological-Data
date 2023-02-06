@@ -124,9 +124,9 @@ Applied for the characterization of significant intra- and inter- parameters ass
 - Metabolites associated with G6PD
 - Physiological Parameter – Compound Similarities
 - Protein Similarities
-- Protein – Compounds Similarities 
+- Protein – Compounds Similarities
 
-$$ Pearson's  Similarity(A,B) = {cov(A,B) \over {σ_{A}\bulletσ_{Β}}} = {{\sum_{i=1}^n (A_{i}-\overline A)(B_{i}-\overline B)} \over {\sum_{i=1}^n (A_{i}-\overline A)^2(B_{i}-\overline B)^2}} $$
+$$ Pearson's  Similarity(A,B) = {cov(A,B) \over {σ_{A} \times σ_{Β}}} = {{\sum_{i=1}^n (A_{i}-\overline A)(B_{i}-\overline B)} \over {\sum_{i=1}^n (A_{i}-\overline A)^2(B_{i}-\overline B)^2}} $$
 
 *Cosine Similarity Algorithm*
 
@@ -134,7 +134,9 @@ Used for:
 - Comparison of donors’ metabolic profile
 - Effect of time in G6PD- donor’s RBCs
 
+$$ Cosine Similarity(A,B) = {A\bullet B \over {\lVert \mathbf{A} \rVert \times \lVert \mathbf{B} \rVert}} = {{\sum_{i=1}^n A_{i} \times B_{i}} \over \sqrt\sum_{i=1}^n A_{i}^2 \times \sqrt\sum_{i=1}^n B_{i}^2}$$
 
+**<ins>Setting the Threshold</ins>**
 
 #### 2.4 The final Knowledge Graph 
 
