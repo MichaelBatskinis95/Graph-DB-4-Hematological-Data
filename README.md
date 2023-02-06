@@ -103,7 +103,7 @@ The following issues were fixed in this stage:</br>
 
 #### 2.2 The Graph Data Model
 
-<p align="justify">In total, the Bio/Hematological Data Network consists of **933 nodes**, divided in 9 general groups and **87,790 relationships**, arranged in 15 distinct types. The proposed graph data model consists of the following node types: compounds divided in 33 different subgroups depending on the metabolic pathway the belong to, physiological parameters, proteomics, donor, stitch data, string data, Ensembl, disease and G6PD. Below an infographic representation of the graph data model, that shows which node types interact with nodes types, is shown: </p>
+<p align="justify">In total, the Bio/Hematological Data Network consists of <b>933 nodes</b>, divided in 9 general groups and <b>87,790 relationships</b>, arranged in 15 distinct types. The proposed graph data model consists of the following node types: compounds divided in 33 different subgroups depending on the metabolic pathway the belong to, physiological parameters, proteomics, donor, stitch data, string data, Ensembl, disease and G6PD. Below an infographic representation of the graph data model, that shows which node types interact with nodes types, is shown: </p>
 
 <p align="middle">
 <img src="https://github.com/MichaelBatskinis95/Figures/blob/main/Infographic_Representation_GraphDB.jpg" width="500" height = "450"/>
