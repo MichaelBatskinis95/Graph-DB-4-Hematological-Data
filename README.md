@@ -156,7 +156,36 @@ After properly estimating Pearson Similarity scores, the filtering of the most s
 
 #### 3.1 Investigating Intra- and Inter- Parameter Associations
 
-<p align="justify"> Since the bio/hematological data network was set up to investigate homologous and heterologous correlations between different components and to answer to a set of questions related to this biological issue, a first approach regarding the exploration analysis could be to spectate specific relationships of the graph at will, depending on the question we want to answer. That said, a representative case could be to collect and, subsequently, display all G6PD-related metabolites along with compounds that are highly correlated with. To do so, we need to select to display only relationship types regarding: </p> 
+<p align="justify"> Since the bio/hematological data network was set up to investigate homologous and heterologous correlations between different components and to answer to a set of questions related to this biological issue, a first approach regarding the exploration analysis could be to spectate specific relationships of the graph at will, depending on the question we want to answer. That said, a representative case could be to collect and, subsequently, display all G6PD-related metabolites along with compounds that are highly correlated with. To do so, we need to display only relationship types regarding: </p> 
 a) G6PD-related components (relationship type: associated with) and 
 
 b) biologically converged metabolites (relationship type: bio converged compounds)
+
+<p align="justify"> Following that, since we are interested in metabolites closely associated with G6PD and their first neighbours, we need to apply techniques related to tracing neighbours so that we can pick all unnecessary components of the subnetwork and subtract them from the graph space. By doing that only components G6PD-related along with their closest associates are shown on the graph space.  Part of the outcome of this exploration analysis is presented in the following. All nodes are dashed with different colours according to the node type to which they belong.  Dashed in salmon pink colour relationships between G6PD (central node, dashed in blue) and metabolites are shown, while marked with blue colour biologically converged associations of G6PD-related compounds are presented. An alternative option of what was described above could be to display the desired graph using Cypher queries.</p>
+
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/4b47ffc939752b666207601b433fbb861664444f/G6pd_related_compounds.png" width="800" height = "450"/>
+</p> 
+
+#### 3.2 Identifying Crucial Parameters
+
+<p align="justify">To highlight the most popular components of any case-study network displayed on graph space, several centrality measures of the network need to be estimated, so that any finding, that might be derived, would be more trustworthy.  A case of major importance could be to identify the most crucial components concerning the metabolic profile or their interconnections with the physiological and proteomic profile of G6PD- donors.  For the characterization of such components Betweeness Centrality (BC) and Closeness Centrality (CC) metrics were used as a guide.
+Resulting BC and CC values of the case-study network were further investigated by normalizing the corresponding values to scale of [0,1], excluding graph entities with insignificant values (BC < 0.10 and CC <0.10) and further visualizing the most significant by applying more responsive techniques in Tableau.  In the following figure the normalized values of BC and CC of the most significant metabolites are presented.  Metabolites are considered crucial for the network in the case they have relatively high BC and CC scores.  Such components could be characterized as central nodes of the biologically converged compounds, indicating that they might play some role in the metabolic profile of G6PD- donors.</p>
+
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/4b47ffc939752b666207601b433fbb861664444f/Significant%20Metabolites.png" width="800" height = "450"/>
+</p> 
+
+<p align="justify">The above tree map presents the most biologically converged metabolites that are related to G6PD deficiency, according to their BC and CC scores.  The colour scaling is relative to the CC score, which means that the darker the colour of a component the higher its CC score.  Additionally, the size of each box is relative to the BC of graph entities.  In that sense, the bigger the box of component that higher its BC score.</p>
+
+<p align="justify"> Another informative example of such an exploration analysis could be the characterization of crucial parameters amongst metabolites and physiological parameters.  Since the parts of computing centralities, pre-processing, and preparing for visualization via heatmaps are like the first case, we will discuss the outcome of the analysis.  In the following figure the outcome of the exploration analysis, that was conducted for the characterization of the most significant G6PD-related components, is presented. The figure displays in the form of packed bubbles the most biologically converged components, according to their BC and CC scores.  The colour scaling is relative to the CC score, which means that the darker the colour of a component the higher its CC score.  Additionally, the size of each circle is relative to the BC score of graph entities.  In that sense, the bigger the circle of a component the higher its BC score. </p>
+
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/4b47ffc939752b666207601b433fbb861664444f/Crusial_Compounds.png" width="800" height = "600"/>
+</p> 
+
+<p align="justify"> One can easily notice that even though most of the displayed parameters have similar closeness values, some of them can be distinguished as more noteworthy due to their high betweenness measure.  More specifically, mechanical fragility (MFI), osmotic fragility (MCF and MCF_37) and antioxidant capacity (TAC and TAC_UA) of stored RBCs seem to be these parameters that are more central to the network.  This finding depicts some of the primary characteristics of RBCs, which are related to their sustainability to mechanical and oxidative stress.  At any time, these markers can give insight about the RBC’s integrity since high levels of MFI or MFC are related with RBC aging and subsequently hemolysis. </p>
+
+#### 3.3 Detecting Communities
+
+<p align="justify"> The last case study that will be presented concerns the detection of communities in a graph and consists of two parts.  The first part of this case is related to the process that is followed to detect communities that are formed in the subnetwork of biological converged components and work with some of them.  For the identification of communities, the Louvain method is used.  In the following figure a detailed walkthrough for detecting communities using GraphXR is presented. </p>
