@@ -138,9 +138,21 @@ $$ Cosine Similarity(A,B) = {A\bullet B \over {\lVert \mathbf{A} \rVert \times \
 
 **<ins>Setting the Threshold</ins>**
 
-After properly estimating Pearson Similarity scores, the filtering of the most significant intra- and inter- parameter correlations took place.  To o achieve that, a threshold was set, so that statistically significant associations will be distinguished.  The value of the threshold varied in each case, depending on the size of the case study dataset or the number of samplings.
+<p align="justify"> After properly estimating Pearson Similarity scores, the filtering of the most significant intra- and inter- parameter correlations took place.  To achieve that, a threshold was set, so that statistically significant associations will be distinguished.  The value of the threshold varied in each case, depending on the size of the case study dataset or the number of samplings. It is important to mention that this step was applied only in cases where Pearson Similarity algorithm were used, since Cosine Similarity was used only for purposes of estimating the percentage of identity between compared groups. In the following figure thresholds of all intra- and -inter- parameter associations are shown. </p>
+
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/f252f20294014ef9aa91b89a870d9d85fa485064/Threshold.svg" width="600" height = "200"/>
+</p>
 
 **<ins>Filtering biologically converged correlations</ins>**
+<p align="justify">By applying the threshold that was mentioned above, the most insignificant associations between different node types were excluded from any further analysis.  However, a stricter approach was necessary, to proceed with the filtering of biologically converged correlations.  For this reason, the repeatability score was applied.  As its name suggests, repeatability score explores the times an event occurs.  In our case, the event, that was tested, was the correlation between two variables.  Therefore, if a case study pair of variables passed the repeatability score, the relationship that is formed between them would be considered biologically converged. From this process the following converged relationships were identified:</p>
+
+- metabolites related to G6PD (r.s* &#8805; 4 (max 7))
+- biologically converged correlations between metabolites (r.s &#8805; 4 (max 7))
+- biologically converged relationships between metabolites and physiological parameters (r.s* &#8805; 25 % of theoretically possible combinations**)
+
+*r.s: repeatbility score<br>
+**theoretically possible combinations: 7 (samplings for physiological data) • 7(sampling for metabolic data) = 49
 
 #### 2.4 The final Knowledge Graph 
 
@@ -152,7 +164,7 @@ After properly estimating Pearson Similarity scores, the filtering of the most s
 
 ### 3. Data Exploration for Bio/Hematological Networks
 
-<p align"justify"> To facilitate data exploration on bio/hematological data, we adopted the GraphXR tool. which provides effective visualization capabilities especially for users without an IT background. Using GraphXR we applied several graph-related techniques to highlight significant inter- and intra- parameter associations, identify crucial components and discover communities that are formed within different subgraphs. </p>
+<p align"justify">To facilitate data exploration on bio/hematological data, we adopted the GraphXR tool. which provides effective visualization capabilities especially for users without an IT background. Using GraphXR we applied several graph-related techniques to highlight significant inter- and intra- parameter associations, identify crucial components and discover communities that are formed within different subgraphs.</p>
 
 #### 3.1 Investigating Intra- and Inter- Parameter Associations
 
