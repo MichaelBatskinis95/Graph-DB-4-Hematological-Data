@@ -189,3 +189,13 @@ Resulting BC and CC values of the case-study network were further investigated b
 #### 3.3 Detecting Communities
 
 <p align="justify"> The last case study that will be presented concerns the detection of communities in a graph and consists of two parts.  The first part of this case is related to the process that is followed to detect communities that are formed in the subnetwork of biological converged components and work with some of them.  For the identification of communities, the Louvain method is used.  In the following figure a detailed walkthrough for detecting communities using GraphXR is presented. </p>
+
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/1d59d44db4ebcec67644cd542c5259928f86e25c/Detecting_Communities_part_I.svg" width="900" height = "450"/>
+</p> 
+
+<p align="justify"> The second part of this process is related to the exploration analysis that can take place once we have selected a cluster to work with.  In this case we decided to work with the cluster that is formed around the Physiological Parameter “MFI_37”, which, as described in Section 3.2., is one of the crucial parameters for the biological issue that we studied.  Figure 10 presents the cluster that was detected for the graph entity “MFI_37” emphasising in its first neighbours. Following such exploratory approaches one can gain insight about potential effects between connected components. </p>
+
+<p align="middle">
+<img src="https://github.com/MichaelBatskinis95/Figures/blob/df70ad3a039b13bbde31fe704882274e3eb07815/Detecting_Communities_part_II.png.svg" width="600" height = "300"/>
+</p> 
