@@ -151,3 +151,12 @@ After properly estimating Pearson Similarity scores, the filtering of the most s
 </p>
 
 ### 3. Data Exploration for Bio/Hematological Networks
+
+<p align"justify"> To facilitate data exploration on bio/hematological data, we adopted the GraphXR tool. which provides effective visualization capabilities especially for users without an IT background. Using GraphXR we applied several graph-related techniques to highlight significant inter- and intra- parameter associations, identify crucial components and discover communities that are formed within different subgraphs. </p>
+
+#### 3.1 Investigating Intra- and Inter- Parameter Associations
+
+<p align="justify"> Since the bio/hematological data network was set up to investigate homologous and heterologous correlations between different components and to answer to a set of questions related to this biological issue, a first approach regarding the exploration analysis could be to spectate specific relationships of the graph at will, depending on the question we want to answer. That said, a representative case could be to collect and, subsequently, display all G6PD-related metabolites along with compounds that are highly correlated with. To do so, we need to select to display only relationship types regarding: </p> 
+a) G6PD-related components (relationship type: associated with) and 
+
+b) biologically converged metabolites (relationship type: bio converged compounds)
